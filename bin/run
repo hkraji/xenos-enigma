@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/xenos_enigma'
+
+XenosEnigma::Runner.start
