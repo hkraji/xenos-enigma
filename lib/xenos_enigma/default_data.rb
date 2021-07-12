@@ -1,6 +1,5 @@
 module XenosEnigma
   module DefaultData
-
     SCAN_DATA = <<~eos
     ----o--oo----o--ooo--ooo--o------o---oo-o----oo---o--o---------o----o------o-------------o--o--o--o-
     --o-o-----oooooooo-oooooo---o---o----o------ooo-o---o--o----o------o--o---ooo-----o--oo-o------o----
