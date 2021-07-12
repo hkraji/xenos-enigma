@@ -1,9 +1,8 @@
-# TODO: Convention over configuration load
-require_relative 'xenos/tao'
-require_relative 'xenos/aeldari'
-
 require_relative 'default_data'
 require_relative 'hit_collector'
+Dir[File.expand_path('xenos/*.rb', File.dirname(__FILE__))].each do |file|
+  require_relative file
+end
 
 module XenosEnigma
   class Radar
@@ -11,9 +10,7 @@ module XenosEnigma
 
     def initialize(data = nil)
       @data = (data || SCAN_DATA).split(/\n/)
-      # TODO: Convention over configuration
-      @known_xenos = [Xenos::Tao.new, Xenos::Aeldari.new]
-      # @known_xenos = [ Xenos::Aeldari.new]
+      @known_xenos = load_all_know_xenos
       @hit_collector = XenosEnigma::HitCollector.new
     end
 
@@ -60,6 +57,11 @@ module XenosEnigma
 
     def scan_row_partial(scan_row, position_x, x_offset)
       scan_row[position_x..(position_x + x_offset - 1)]
+    end
+
+    def load_all_know_xenos
+      xenox_clazzes = XenosEnigma::Xenos.constants.reject { |xc| xc.downcase.eql?(:base) }
+      xenox_clazzes.collect { |xc| XenosEnigma::Xenos.const_get(xc).new }
     end
 
   end

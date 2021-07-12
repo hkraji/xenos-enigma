@@ -2,7 +2,6 @@ module XenosEnigma
   class HitCollector
 
     def initialize
-      @hits = []
       @hit_matrix_cache = {}
     end
 
@@ -24,8 +23,6 @@ module XenosEnigma
     private
 
     def consume(xeno_hit)
-      @hits.push(xeno_hit)
-
       xeno_data = xeno_hit.xeno_instance.xeno_signature
 
       xeno_data.each_with_index do |xeno_row_data, xeno_y|
