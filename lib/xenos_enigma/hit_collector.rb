@@ -1,6 +1,5 @@
 module XenosEnigma
   class HitCollector
-
     def initialize
       @hit_matrix_cache = {}
     end
@@ -38,12 +37,12 @@ module XenosEnigma
       end
     end
 
-    def get_cache(x, y)
-      @hit_matrix_cache[cache_key(x, y)]
+    def get_cache(position_x, position_y)
+      @hit_matrix_cache[cache_key(position_x, position_y)]
     end
 
-    def cache_key(x, y)
-      "#{x}::#{y}"
+    def cache_key(position_x, position_y)
+      "#{position_x}::#{position_y}"
     end
   end
 

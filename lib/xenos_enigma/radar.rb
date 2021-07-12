@@ -16,7 +16,7 @@ module XenosEnigma
 
     def scan
       @data.each_with_index do |scan_row, scan_position_y|
-        for scan_position_x in 0..scan_row.length
+        (0..scan_row.length).each do |scan_position_x|
           next if @hit_collector.already_detected?(scan_position_x, scan_position_y)
 
           @known_xenos.each do |xeno|
@@ -33,22 +33,21 @@ module XenosEnigma
       echo_height = @data.size - 1
       print "\033[33m"
 
-      for echo_y in 0..echo_height
-        for echo_x in 0..echo_width
+      (0..echo_height).each do |echo_y|
+        (0..echo_width).each do |echo_x|
           hit_data = @hit_collector.detection_data(echo_x, echo_y)
-          print hit_data ? hit_data : "-"
+          print hit_data || '-'
         end
         puts
       end
     end
-
 
     private
 
     def look_ahead_data(position_x, position_y, xeno)
       results = []
       scan_to_y = [(position_y + xeno.ship_height), @data.size].min - 1
-      for scan_y in position_y..scan_to_y
+      (position_y..scan_to_y).each do |scan_y|
         partial = scan_row_partial(@data[scan_y], position_x, xeno.ship_width)
         results.push(partial)
       end
@@ -63,6 +62,5 @@ module XenosEnigma
       xenox_clazzes = XenosEnigma::Xenos.constants.reject { |xc| xc.downcase.eql?(:base) }
       xenox_clazzes.collect { |xc| XenosEnigma::Xenos.const_get(xc).new }
     end
-
   end
 end
