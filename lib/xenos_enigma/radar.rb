@@ -10,7 +10,7 @@ module XenosEnigma
 
     def initialize(data = nil)
       @data = (data || SCAN_DATA).split(/\n/)
-      @known_xenos = load_all_know_xenos
+      @known_xenos = load_all_known_xenos
       @hit_collector = XenosEnigma::HitCollector.new
     end
 
@@ -59,7 +59,7 @@ module XenosEnigma
       scan_row[position_x..(position_x + x_offset - 1)]
     end
 
-    def load_all_know_xenos
+    def load_all_known_xenos
       xenox_clazzes = XenosEnigma::Xenos.constants.reject { |xc| xc.downcase.eql?(:base) }
       xenox_clazzes.collect { |xc| XenosEnigma::Xenos.const_get(xc).new }
     end
