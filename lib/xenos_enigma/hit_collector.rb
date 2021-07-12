@@ -6,9 +6,8 @@ module XenosEnigma
       @hit_matrix_cache = {}
     end
 
-    def echo(position_x, position_y)
-      cache_hit = get_cache(position_x, position_y)
-      print cache_hit ? cache_hit : "-"
+    def detection_data(position_x, position_y)
+      get_cache(position_x, position_y)
     end
 
     def already_detected?(position_x, position_y)

@@ -1,15 +1,5 @@
 module XenosEnigma
   module DefaultData
-    TRICK = <<~eos
-    ----o--oo---o-ooooooo-oo--o------o---
-    --o-o-----ooo-o-----o-ooo---o---o----
-    --o--------o---oo-oo----oo-----O-----
-    -------o--oooooo--o-oo-o--o-o-----oo-
-    ------o---o-ooo-ooo----o-----oo------
-    -o--o-----o-o---o-ooooo-o-------oo---
-    o-------------ooooo-o--o--o--o-------
-    --o-------------------------oo-------
-    eos
 
     SCAN_DATA = <<~eos
     ----o--oo----o--ooo--ooo--o------o---oo-o----oo---o--o---------o----o------o-------------o--o--o--o-

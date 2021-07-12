@@ -5,6 +5,7 @@ module XenosEnigma
 
       SHIP_DETECTION_TOLERANCE = 2
       SHIP_DETECTION_COMPOUND_TOLERENCE = 1.6
+      MIN_DETECTION_SHIP_SEGMENTS = 3
 
       def initialize
         raise "This is a abstract class" if self.class.eql?(XenosEnigma::Xenos::Base) 
@@ -39,12 +40,14 @@ module XenosEnigma
           lines_scanned += 1
         end
 
-        if lines_scanned == ship_height && lines_scanned * SHIP_DETECTION_COMPOUND_TOLERENCE >= compound_match_score
+        is_detection_cofirmed = lines_scanned * SHIP_DETECTION_COMPOUND_TOLERENCE >= compound_match_score
+
+        if lines_scanned == ship_height && is_detection_cofirmed
           return XenosEnigma::Hit.new(self)
-        else
-          if lines_scanned >= 3 && lines_scanned * SHIP_DETECTION_COMPOUND_TOLERENCE >= compound_match_score
-            return XenosEnigma::Hit.new(self, xeno_y_position)
-          end
+        end
+
+        if lines_scanned >= MIN_DETECTION_SHIP_SEGMENTS && is_detection_cofirmed
+          return XenosEnigma::Hit.new(self, xeno_y_position)
         end
       end
 

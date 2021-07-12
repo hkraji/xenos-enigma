@@ -38,7 +38,8 @@ module XenosEnigma
 
       for echo_y in 0..echo_height
         for echo_x in 0..echo_width
-          @hit_collector.echo(echo_x, echo_y)
+          hit_data = @hit_collector.detection_data(echo_x, echo_y)
+          print hit_data ? hit_data : "-"
         end
         puts
       end
