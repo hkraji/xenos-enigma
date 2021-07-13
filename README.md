@@ -14,7 +14,7 @@ gem install xenos-enigma
 
 ```
 $ xenos-enigma --help
-Usage: bin/xenos-enigma [--path FILE]
+Usage: xenos-enigma [--path FILE]
 --help  	 show help
 --path FILE 	 set path to radar data file, uses default data if no file provided
 ```
