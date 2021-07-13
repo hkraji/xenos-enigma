@@ -3,7 +3,7 @@ require_relative 'base'
 module XenosEnigma
   module Xenos
     class Tau < Base
-      SIGNITURE = <<~EOS
+      SIGNATURE = <<~EOS
         ---oo---
         --oooo--
         -oooooo-

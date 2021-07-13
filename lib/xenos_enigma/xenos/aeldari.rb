@@ -3,7 +3,7 @@ require_relative 'base'
 module XenosEnigma
   module Xenos
     class Aeldari < Base
-      SIGNITURE = <<~EOS
+      SIGNATURE = <<~EOS
         --o-----o--
         ---o---o---
         --ooooooo--

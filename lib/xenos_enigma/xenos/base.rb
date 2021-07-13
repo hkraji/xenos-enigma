@@ -6,9 +6,9 @@ module XenosEnigma
       SHIP_DETECTION = { tolerance: 2, compound_tolerance: 1.6, min_segments: 3 }.freeze
 
       def initialize
-        raise 'This is an abstract class' if instance_of?(XenosEnigma::Xenos::Base)
+        raise RuntimeError, 'This is an abstract class' if instance_of?(XenosEnigma::Xenos::Base)
 
-        @xeno_signature = self.class::SIGNITURE.split(/\n/)
+        @xeno_signature = self.class::SIGNATURE.split(/\n/)
         @ship_width  = @xeno_signature.first.size
         @ship_height = @xeno_signature.size
       end
