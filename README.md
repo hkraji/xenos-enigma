@@ -28,7 +28,7 @@ rspec                     # run test suite
 ```
 
 ## Known Xenos
-#### Tau
+#### Aeldari
 ~~~~
 --o-----o--
 ---o---o---
@@ -39,7 +39,7 @@ o-ooooooo-o
 o-o-----o-o
 ---oo-oo---
 ~~~~
-#### Aeldari
+#### Tau
 ~~~~
 ---oo---
 --oooo--
