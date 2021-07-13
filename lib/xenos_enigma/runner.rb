@@ -11,7 +11,7 @@ module XenosEnigma
       opts = Hash[*opts.get_option]
 
       if opts['--help']
-        puts 'Usage: bin/run [--path FILE]'
+        puts 'Usage: bin/xenos-enigma [--path FILE]'
         puts "--help  \t show help"
         puts "--path FILE \t set path to radar data file, uses default data if no file provided"
         exit(0)
