@@ -22,6 +22,7 @@ Usage: bin/run [--path FILE]
 ## Development
 
 ```ruby
+bundle install            # install development dependencies
 bin/xenos-enigma          # run executable
 rspec                     # run test suite
 ```

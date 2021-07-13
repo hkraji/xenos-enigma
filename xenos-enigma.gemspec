@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.email = ['haris.krajina@gmail.com']
   gem.license = 'MIT'
   gem.date = Time.now.strftime('%Y-%m-%d')
-  gem.summary = 'Space invaders radar put in the world of 40k'
+  gem.summary = 'Space invaders radar set in the world of 40k'
   gem.homepage = 'http://github.com/hkraji/xenos-enigma'
   gem.executables = %w(xenos-enigma)
 
