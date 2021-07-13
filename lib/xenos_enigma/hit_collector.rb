@@ -1,4 +1,5 @@
 module XenosEnigma
+  # HitCollector will consume all ship hits, and cache their data and coordinates
   class HitCollector
     def initialize
       @hit_matrix_cache = {}
@@ -46,6 +47,7 @@ module XenosEnigma
     end
   end
 
+  # Hit is placeholder for ship detection information
   class Hit
     attr_accessor :radar_x_position,
                   :radar_y_position,

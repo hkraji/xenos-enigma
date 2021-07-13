@@ -1,6 +1,6 @@
 module XenosEnigma
   module DefaultData
-    SCAN_DATA = <<~EOS
+    SCAN_DATA = <<~DATA.freeze
       ----o--oo----o--ooo--ooo--o------o---oo-o----oo---o--o---------o----o------o-------------o--o--o--o-
       --o-o-----oooooooo-oooooo---o---o----o------ooo-o---o--o----o------o--o---ooo-----o--oo-o------o----
       --o--------oo-ooo-oo-oo-oo-----O------------ooooo-----oo----o------o---o--o--o-o-o------o----o-o-o--
@@ -51,6 +51,6 @@ module XenosEnigma
       -------o---o------oooooo--o----ooo--o--------o-------o----------------------------oo-oo-o--o--------
       o--oo------o-----oo--o-oo------------oo--o------o--o-------------oo----o------------oooo-o------oo--
       -----o----------ooooooooo--------------oo--------------oo-----o-----o-o--o------o----------o----o---
-    EOS
+    DATA
   end
 end

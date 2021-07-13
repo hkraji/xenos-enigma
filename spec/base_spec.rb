@@ -55,7 +55,7 @@ RSpec.describe XenosEnigma::Xenos::Base do
       rdata = randomize_data(['--------'] * 8)
       result = tau.analyze?(rdata[0], rdata)
 
-      expect(result).to be nil
+      expect(result).to be_falsey
     end
   end
 end

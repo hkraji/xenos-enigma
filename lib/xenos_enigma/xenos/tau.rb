@@ -3,7 +3,7 @@ require_relative 'base'
 module XenosEnigma
   module Xenos
     class Tau < Base
-      SIGNATURE = <<~EOS
+      SIGNATURE = <<~SIGNATURE.freeze
         ---oo---
         --oooo--
         -oooooo-
@@ -12,7 +12,7 @@ module XenosEnigma
         --o--o--
         -o-oo-o-
         o-o--o-o
-      EOS
+      SIGNATURE
     end
   end
 end

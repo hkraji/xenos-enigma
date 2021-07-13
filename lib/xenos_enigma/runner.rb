@@ -1,8 +1,8 @@
 require_relative 'radar'
 require 'getoptlong'
-require 'byebug'
 
 module XenosEnigma
+  # Runner is responsable for end user interaction via console
   class Runner
     def self.start
       radar_data = nil

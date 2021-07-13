@@ -5,6 +5,7 @@ Dir[File.expand_path('xenos/*.rb', File.dirname(__FILE__))].each do |file|
 end
 
 module XenosEnigma
+  # Radar will orchestrate scan of radar data, xenos detection and echo of those findings
   class Radar
     include DefaultData
 

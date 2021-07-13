@@ -1,15 +1,16 @@
-$:.unshift File.expand_path('lib', File.dirname(__FILE__))
-require 'looksee/version'
+$LOAD_PATH.unshift File.expand_path('lib', File.dirname(__FILE__))
+require_relative 'lib/xenos_enigma/version'
 
 Gem::Specification.new do |gem|
   gem.name = 'xenos-enigma'
-  gem.version = XenosEnigma::VERSION
+  gem.version = ::XenosEnigma::VERSION
   gem.authors = ['Haris Krajina']
   gem.email = ['haris.krajina@gmail.com']
   gem.license = 'MIT'
-  gem.date = Time.now.strftime('%d/%m/%Y')
+  gem.date = Time.now.strftime('%Y-%m-%d')
   gem.summary = 'Space invaders radar put in the world of 40k'
   gem.homepage = 'http://github.com/hkraji/xenos-enigma'
+  gem.executables = %w(xenos-enigma)
 
   gem.extra_rdoc_files = ['CHANGELOG', 'LICENSE', 'README.md']
   gem.files = Dir['lib/**/*', 'CHANGELOG', 'LICENSE', 'README.md']

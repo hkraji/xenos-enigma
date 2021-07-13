@@ -1,0 +1,6 @@
+== 1.0.0 / 13-07-2021
+  * ability to detect multiple xenos ships in radar data
+  * ability to easily extend xenos supported detection
+  * ability to read radar data from file
+  * agnostic to dimensions of radar data
+  * rspec added

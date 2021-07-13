@@ -1,12 +1,13 @@
 module XenosEnigma
   module Xenos
+    # Base class holds all the logic for correctly detecting xenos ships
     class Base
       attr_reader :ship_width, :ship_height, :xeno_signature
 
       SHIP_DETECTION = { tolerance: 2, compound_tolerance: 1.6, min_segments: 3 }.freeze
 
       def initialize
-        raise RuntimeError, 'This is an abstract class' if instance_of?(XenosEnigma::Xenos::Base)
+        raise 'This is an abstract class' if instance_of?(XenosEnigma::Xenos::Base)
 
         @xeno_signature = self.class::SIGNATURE.split(/\n/)
         @ship_width  = @xeno_signature.first.size

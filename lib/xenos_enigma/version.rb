@@ -1,5 +1,3 @@
 module XenosEnigma
-  def self.version
-    '1.0.0'
-  end
+  VERSION = '1.0.0'
 end
