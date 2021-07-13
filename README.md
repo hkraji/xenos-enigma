@@ -2,7 +2,7 @@
 
 ## Description:
 
-In the grim dark future of 40k, there is only war and humanity is under threat again. There are Xenos forces emerging from deep space and the order of Adeptus Mechanicus has been tasked with creating advanced radar systems to detect these threats.
+In the grim dark future of 40k, there is only war and humanity is under threat again. There are Xenos forces emerging from deep space and the order of Adeptus Mechanicus has been tasked with creating advanced radar systems to detect these threats before it is too late.
 
 ## Installation
 
@@ -15,7 +15,7 @@ gem install xenos-enigma
 ```
 xenos-enigma --help
 Usage: bin/run [--path FILE]
---help  	     show help
+--help  	 show help
 --path FILE 	 set path to radar data file, uses default data if no file provided
 ```
 
